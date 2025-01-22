@@ -13,11 +13,16 @@
   "main_menu_button2": "\uD83E\uDD16 Robot sonni topchi",
   "main_menu_button3": "\uD83D\uDCCA Umumiy statistika",
   "main_menu_button4": "⚙\uFE0F Sozlamalar",
+  "main_menu_button5": "\uD83C\uDF10 Tilni oʻzgartirish",
+  "main_menu_button6": "◀\uFE0F Orqaga qaytish",
   "are_you_ready_game": "Diqqat!\nBu oʻyinda robot 1 dan 100 gacha oraliqda bir son oʻylaydi. Siz esa u sonni topishingiz kerak.\nMen son topaman oʻyinini boshlashga tayyormisiz?",
   "ready_game": "\uD83D\uDE80 Oʻyinni boshlash",
   "find_number_start": "Men 1 dan 100 gacha oraliqda bir son oʻyladim.\n<b>Sonni topchi</b>",
   "find_number_complete": "\uD83E\uDD73 Qoyil, siz men oʻylagan sonni {attempts} ta urinishda topdingiz!",
   "find_number_small": "Men oʻylagan son {user_number} dan kattaroq!\nQayta urinib koʻring",
   "find_number_big": "Men oʻylagan son {user_number} dan kichikroq!\nQayta urinib koʻring",
-  "find_number_error_value": "‼\uFE0F Xato qiymat! 1 dan 100 oraliqda qiymat yuboring"
+  "find_number_error_value": "‼\uFE0F Xato qiymat! 1 dan 100 oraliqda qiymat yuboring",
+  "settings_menu": "Sozlamalar paneli",
+  "set_language": "Tilni tanlang:",
+  "set_language_completed": "✅ Til muvaffaqiyatli oʻzgartirildi!"
 }

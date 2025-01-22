@@ -14,6 +14,8 @@ class AsyncJSONManager:
         self.MAIN_MENU_BUTTON3 = []
         self.MAIN_MENU_BUTTON4 = []
         self.READY_GAME_BUTTON = []
+        self.SET_LANGUAGE_BUTTON = []
+        self.BACK_BUTTON = []
 
     async def read_messages(self):
         for language_code in self.languages:
@@ -38,6 +40,8 @@ class AsyncJSONManager:
         self.MAIN_MENU_BUTTON3 = await self.get_menu_title(3)
         self.MAIN_MENU_BUTTON4 = await self.get_menu_title(4)
         self.READY_GAME_BUTTON = await self.get_ready_game_title()
+        self.SET_LANGUAGE_BUTTON = await self.get_menu_title(5)
+        self.BACK_BUTTON = await self.get_menu_title(6)
 
     async def get_message(self, language_code: str, key: str):
         return self.cache[language_code][key]

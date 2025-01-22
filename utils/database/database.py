@@ -81,6 +81,14 @@ class Database:
         """
         await self.execute(query_user, str(tg_id), username, fullname, phone, location_id, chat_lang)
 
+    async def user_update_chat_lang(self, tg_id, chat_lang):
+        query = """
+            UPDATE bot_users
+            SET chat_lang = $2
+            WHERE tg_id = $1;
+        """
+        await self.execute(query, str(tg_id), chat_lang)
+
     async def add_result(self, user, attempts, created_at, completed_at, **kwargs):
         query = """
             INSERT INTO results (user_id, number_of_attempts, created_at, completed_at)
