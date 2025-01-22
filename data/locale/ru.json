@@ -8,7 +8,16 @@
   "get_location": "Пожалуйста, введите свое местоположение:",
   "send_location": "\uD83D\uDCCD Отправить местоположение",
   "register_completed": "✅ Ваша регистрация завершена. Спасибо!",
+  "warning": "‼\uFE0F Ошибки!\nПожалуйста, используйте следующие кнопки:",
   "main_menu_button1": "\uD83D\uDD22 Я найду число",
   "main_menu_button2": "\uD83E\uDD16 Найди номер робота",
-  "main_menu_button3": "\uD83D\uDCCA Общая статистика"
+  "main_menu_button3": "\uD83D\uDCCA Общая статистика",
+  "main_menu_button4": "⚙\uFE0F Настройки",
+  "are_you_ready_game": "Внимание!\nВ этом игре робот генерирует число от 1 до 100. Вам нужно находить это число.\nХотите начать игру?",
+  "ready_game": "\uD83D\uDE80 Начать игру",
+  "find_number_start": "Я загадал число от 1 до 100.\n<b>Угадай число</b>",
+  "find_number_complete": "\uD83E\uDD73 Отлично, вы угадали мое число за {attempts} попыток!",
+  "find_number_small": "Загаданное мной число больше {user_number}!\nПопробуйте ещё раз",
+  "find_number_big": "Загаданное мной число меньше {user_number}!\\nПопробуйте ещё раз",
+  "find_number_error_value": "‼\uFE0F Неверное значение! Отправьте значение от 1 до 100"
 }

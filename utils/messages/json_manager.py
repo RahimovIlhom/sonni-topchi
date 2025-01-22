@@ -9,6 +9,11 @@ class AsyncJSONManager:
         self.languages = LANGUAGES
         self.cache = {}
         self.LANGUAGES_TITLES = []
+        self.MAIN_MENU_BUTTON1 = []
+        self.MAIN_MENU_BUTTON2 = []
+        self.MAIN_MENU_BUTTON3 = []
+        self.MAIN_MENU_BUTTON4 = []
+        self.READY_GAME_BUTTON = []
 
     async def read_messages(self):
         for language_code in self.languages:
@@ -28,6 +33,11 @@ class AsyncJSONManager:
 
     async def preload_texts(self) -> None:
         self.LANGUAGES_TITLES = await self.get_languages_title()
+        self.MAIN_MENU_BUTTON1 = await self.get_menu_title(1)
+        self.MAIN_MENU_BUTTON2 = await self.get_menu_title(2)
+        self.MAIN_MENU_BUTTON3 = await self.get_menu_title(3)
+        self.MAIN_MENU_BUTTON4 = await self.get_menu_title(4)
+        self.READY_GAME_BUTTON = await self.get_ready_game_title()
 
     async def get_message(self, language_code: str, key: str):
         return self.cache[language_code][key]
@@ -39,3 +49,9 @@ class AsyncJSONManager:
         for lang in self.languages:
             if await self.get_message(lang, "language_title") == language_title:
                 return lang
+
+    async def get_menu_title(self, code: int = 1) -> list:
+        return [await self.get_message(lang, f"main_menu_button{code}") for lang in self.languages]
+
+    async def get_ready_game_title(self) -> list:
+        return [await self.get_message(lang, "ready_game") for lang in self.languages]

@@ -8,7 +8,16 @@
   "get_location": "Send your location",
   "send_location": "\uD83D\uDCCD Send location",
   "register_completed": "✅ Your registration is completed. Thank you!",
+  "warning": "‼\uFE0F Warning!\nPlease use the buttons below.",
   "main_menu_button1": "\uD83D\uDD22 I will find the number",
   "main_menu_button2": "\uD83E\uDD16 Find the robot number",
-  "main_menu_button3": "\uD83D\uDCCA General statistics"
+  "main_menu_button3": "\uD83D\uDCCA General statistics",
+  "main_menu_button4": "⚙\uFE0F Settings",
+  "are_you_ready_game": "Attention!\nIn this game, the robot will generate a number from 1 to 100. You need to find this number.\nDo you want to start the game?",
+  "ready_game": "\uD83D\uDE80 Start the game",
+  "find_number_start": "I have thought of a number between 1 and 100.\\n<b>Guess the number</b>",
+  "find_number_complete": "\uD83E\uDD73 Amazing, you guessed my number in {attempts} attempts!",
+  "find_number_small": "The number I thought of is greater than {user_number}!\nTry again",
+  "find_number_big": "The number I thought of is smaller than {user_number}!\nTry again",
+  "find_number_error_value": "‼\uFE0F Incorrect value! Please send a value between 1 and 100"
 }

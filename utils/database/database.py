@@ -67,7 +67,7 @@ class Database:
         """
         return await self.fetchrow(query, str(tg_id))
 
-    async def add_user(self, tg_id, username, fullname, phone, latitude, longitude, address, chat_lang):
+    async def add_user(self, tg_id, username, fullname, phone, latitude, longitude, address, chat_lang, **kwagrs):
         query_location = """
             INSERT INTO locations (latitude, longitude, address)
             VALUES ($1, $2, $3)
@@ -80,3 +80,10 @@ class Database:
             VALUES ($1, $2, $3, $4, $5, $6, NOW());
         """
         await self.execute(query_user, str(tg_id), username, fullname, phone, location_id, chat_lang)
+
+    async def add_result(self, user, attempts, created_at, completed_at, **kwargs):
+        query = """
+            INSERT INTO results (user_id, number_of_attempts, created_at, completed_at)
+            VALUES ($1, $2, $3, $4);
+        """
+        await self.execute(query, user['tg_id'], attempts, created_at, completed_at)
