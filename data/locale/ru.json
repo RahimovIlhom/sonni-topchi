@@ -1,0 +1,14 @@
+{
+  "welcome": "Здравствуйте\nДобро пожаловать в <a href='https://t.me/sonni_topchi_bot'>Sonni topchi</a> бот!\n\nПожалуйста, выберите язык:",
+  "menu": "Меню",
+  "language_title": "\uD83C\uDDF7\uD83C\uDDFA Русский",
+  "get_fullname": "Пожалуйста, введите свое полное имя:",
+  "get_contact": "Пожалуйста, введите свою контактную информацию:",
+  "send_contact": "\uD83D\uDCDE Отправить номер телефона",
+  "get_location": "Пожалуйста, введите свое местоположение:",
+  "send_location": "\uD83D\uDCCD Отправить местоположение",
+  "register_completed": "✅ Ваша регистрация завершена. Спасибо!",
+  "main_menu_button1": "\uD83D\uDD22 Я найду число",
+  "main_menu_button2": "\uD83E\uDD16 Найди номер робота",
+  "main_menu_button3": "\uD83D\uDCCA Общая статистика"
+}

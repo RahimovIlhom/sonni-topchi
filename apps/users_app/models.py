@@ -20,6 +20,7 @@ class BotUser(models.Model):
         return self.fullname
 
     class Meta:
+        db_table = 'bot_users'
         verbose_name = 'User'
         verbose_name_plural = 'Users'
         ordering = ['-registered_at']
@@ -34,5 +35,6 @@ class Location(models.Model):
         return self.address
 
     class Meta:
+        db_table = 'locations'
         verbose_name = 'Location'
         verbose_name_plural = 'Locations'

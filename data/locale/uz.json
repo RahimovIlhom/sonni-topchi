@@ -1,0 +1,14 @@
+{
+  "welcome": "Assalomu alaykum\n<a href='https://t.me/sonni_topchi_bot'>Sonni topchi</a> botiga xush kelibsiz!\n\nIltimos, tilni tanlang:",
+  "menu": "Bosh menu",
+  "language_title": "\uD83C\uDDFA\uD83C\uDDFF Oʻzbekcha",
+  "get_fullname": "Ism-familiyangizni yuboring",
+  "get_contact": "Telefon raqamingizni yuboring",
+  "send_contact": "\uD83D\uDCDE Telefon raqamni yuborish",
+  "get_location": "Manzilingizni yuboring",
+  "send_location": "\uD83D\uDCCD Manzilni yuborish",
+  "register_completed": "✅ Roʻyxatdan oʻtish tugallandi. Rahmat!",
+  "main_menu_button1": "\uD83D\uDD22 Men son topaman",
+  "main_menu_button2": "\uD83E\uDD16 Robot sonni topchi",
+  "main_menu_button3": "\uD83D\uDCCA Umumiy statistika"
+}

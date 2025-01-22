@@ -12,6 +12,7 @@ class UserResult(models.Model):
         return self.user.fullname
 
     class Meta:
+        db_table = 'results'
         ordering = ['number_of_attempts']
         verbose_name = 'Result'
         verbose_name_plural = 'Results'

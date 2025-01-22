@@ -1,0 +1,1 @@
+LANGUAGES = ('uz', 'en', 'ru')

@@ -1,0 +1,14 @@
+{
+  "welcome": "Hello\nWelcome to the <a href='https://t.me/sonni_topchi_bot'>Sonni topchi</a> bot!\n\nPlease select your language:",
+  "menu": "Main menu",
+  "language_title": "\uD83C\uDDFA\uD83C\uDDF8 English",
+  "get_fullname": "Enter your full name",
+  "get_contact": "Send your contact",
+  "send_contact": "\uD83D\uDCDE Send contact",
+  "get_location": "Send your location",
+  "send_location": "\uD83D\uDCCD Send location",
+  "register_completed": "✅ Your registration is completed. Thank you!",
+  "main_menu_button1": "\uD83D\uDD22 I will find the number",
+  "main_menu_button2": "\uD83E\uDD16 Find the robot number",
+  "main_menu_button3": "\uD83D\uDCCA General statistics"
+}

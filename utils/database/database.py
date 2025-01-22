@@ -57,4 +57,26 @@ class Database:
             raise RuntimeError(f"Database query failed: {e}")
 
     async def get_user(self, tg_id):
-        pass
+        query = """
+        SELECT 
+            tg_id, username, fullname, phone, location_id, chat_lang, registered_at 
+        FROM 
+            bot_users 
+        WHERE 
+            tg_id = $1
+        """
+        return await self.fetchrow(query, str(tg_id))
+
+    async def add_user(self, tg_id, username, fullname, phone, latitude, longitude, address, chat_lang):
+        query_location = """
+            INSERT INTO locations (latitude, longitude, address)
+            VALUES ($1, $2, $3)
+            RETURNING id;
+        """
+        location_id = await self.fetchval(query_location, latitude, longitude, address)
+
+        query_user = """
+            INSERT INTO bot_users (tg_id, username, fullname, phone, location_id, chat_lang, registered_at)
+            VALUES ($1, $2, $3, $4, $5, $6, NOW());
+        """
+        await self.execute(query_user, str(tg_id), username, fullname, phone, location_id, chat_lang)
