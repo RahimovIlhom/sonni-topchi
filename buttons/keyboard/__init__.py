@@ -5,3 +5,5 @@ from .get_location import location_keyboard
 from .main_manu import main_menu_keyboard
 from .ready_game import ready_game_keyboard
 from .settings import settings_keyboard
+from .ready_robot_game import ready_robot_game_keyboard
+from .robot_game import robot_game_keyboard

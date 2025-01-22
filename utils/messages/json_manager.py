@@ -14,8 +14,12 @@ class AsyncJSONManager:
         self.MAIN_MENU_BUTTON3 = []
         self.MAIN_MENU_BUTTON4 = []
         self.READY_GAME_BUTTON = []
+        self.READY_ROBOT_GAME_BUTTON = []
         self.SET_LANGUAGE_BUTTON = []
         self.BACK_BUTTON = []
+        self.TRUE_ROBOT_NUMBER_BUTTON = []
+        self.SMALL_ROBOT_NUMBER_BUTTON = []
+        self.BIG_ROBOT_NUMBER_BUTTON = []
 
     async def read_messages(self):
         for language_code in self.languages:
@@ -40,8 +44,12 @@ class AsyncJSONManager:
         self.MAIN_MENU_BUTTON3 = await self.get_menu_title(3)
         self.MAIN_MENU_BUTTON4 = await self.get_menu_title(4)
         self.READY_GAME_BUTTON = await self.get_ready_game_title()
+        self.READY_ROBOT_GAME_BUTTON = await self.get_ready_robot_game_title()
         self.SET_LANGUAGE_BUTTON = await self.get_menu_title(5)
         self.BACK_BUTTON = await self.get_menu_title(6)
+        self.TRUE_ROBOT_NUMBER_BUTTON = await self.get_true_robot_num_title()
+        self.SMALL_ROBOT_NUMBER_BUTTON = await self.get_small_robot_num_title()
+        self.BIG_ROBOT_NUMBER_BUTTON = await self.get_big_robot_num_title()
 
     async def get_message(self, language_code: str, key: str):
         return self.cache[language_code][key]
@@ -58,4 +66,16 @@ class AsyncJSONManager:
         return [await self.get_message(lang, f"main_menu_button{code}") for lang in self.languages]
 
     async def get_ready_game_title(self) -> list:
-        return [await self.get_message(lang, "ready_game") for lang in self.languages]
+        return [await self.get_message(lang, "ready_game_button") for lang in self.languages]
+
+    async def get_ready_robot_game_title(self) -> list:
+        return [await self.get_message(lang, "ready_robot_game_button") for lang in self.languages]
+
+    async def get_true_robot_num_title(self) -> list:
+        return [await self.get_message(lang, "true_robot_number_button") for lang in self.languages]
+
+    async def get_small_robot_num_title(self) -> list:
+        return [await self.get_message(lang, "small_robot_number_button") for lang in self.languages]
+
+    async def get_big_robot_num_title(self) -> list:
+        return [await self.get_message(lang, "big_robot_number_button") for lang in self.languages]

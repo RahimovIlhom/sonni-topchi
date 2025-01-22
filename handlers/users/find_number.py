@@ -46,7 +46,8 @@ async def send_user_number(message: Message, state: FSMContext):
 
     if user_num == robot_number:
         await message.reply(
-            text=(await json_manager.get_message(user_lang, key='find_number_complete')).format(attempts=attempts),
+            text=(await json_manager.get_message(user_lang, key='find_number_complete')).format(attempts=attempts) +
+                 f"\n{await json_manager.get_message(data['user']['chat_lang'], 'menu')}",
             reply_markup=await main_menu_keyboard(user_lang)
         )
         await state.clear()

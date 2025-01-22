@@ -16,7 +16,7 @@
   "main_menu_button5": "\uD83C\uDF10 Tilni oʻzgartirish",
   "main_menu_button6": "◀\uFE0F Orqaga qaytish",
   "are_you_ready_game": "Diqqat!\nBu oʻyinda robot 1 dan 100 gacha oraliqda bir son oʻylaydi. Siz esa u sonni topishingiz kerak.\nMen son topaman oʻyinini boshlashga tayyormisiz?",
-  "ready_game": "\uD83D\uDE80 Oʻyinni boshlash",
+  "ready_game_button": "\uD83D\uDE80 Oʻyinni boshlash",
   "find_number_start": "Men 1 dan 100 gacha oraliqda bir son oʻyladim.\n<b>Sonni topchi</b>",
   "find_number_complete": "\uD83E\uDD73 Qoyil, siz men oʻylagan sonni {attempts} ta urinishda topdingiz!",
   "find_number_small": "Men oʻylagan son {user_number} dan kattaroq!\nQayta urinib koʻring",
@@ -24,5 +24,14 @@
   "find_number_error_value": "‼\uFE0F Xato qiymat! 1 dan 100 oraliqda qiymat yuboring",
   "settings_menu": "Sozlamalar paneli",
   "set_language": "Tilni tanlang:",
-  "set_language_completed": "✅ Til muvaffaqiyatli oʻzgartirildi!"
+  "set_language_completed": "✅ Til muvaffaqiyatli oʻzgartirildi!",
+  "robot_find_number": "Diqqat!\nBu oʻyinda siz 1 dan 100 gacha oraliqda bir son oʻylaydi. Robot esa u sonni topishi kerak.\nRobot sonni topchi oʻyinini boshlashga tayyormisiz?",
+  "ready_robot_game_button": "\uD83D\uDE80 Sonni oʻyladim",
+  "get_robot_find_number": "Siz {robot_number} sonini oʻyladingiz, topdimmi?",
+  "true_robot_number_button": "✅ Toʻgʻri",
+  "small_robot_number_button": "➕ Kattaroq",
+  "big_robot_number_button": "➖ Kichikroq",
+  "congrats_robot_text": "\uD83E\uDD73 Oʻzimga qoyil, men siz oʻylagan sonni {attempts} ta urinishda topdim!",
+  "you_lost_text": "\uD83D\uDE21 Siz gʻirromlik qildingiz, shuning uchun siz yutqazdingiz",
+  "robot_game_error": "❌ Iltimos, quyidagi tugmalardan foydalaning!"
 }
