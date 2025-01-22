@@ -95,3 +95,22 @@ class Database:
             VALUES ($1, $2, $3, $4);
         """
         await self.execute(query, user['tg_id'], attempts, created_at, completed_at)
+
+    async def get_general_statistics(self):
+        query = """
+            SELECT 
+                bu.fullname AS fullname,
+                ur.number_of_attempts,
+                EXTRACT(EPOCH FROM (ur.completed_at - ur.created_at)) AS time_taken
+            FROM 
+                results ur
+            INNER JOIN 
+                bot_users bu ON ur.user_id = bu.tg_id
+            WHERE 
+                ur.completed_at IS NOT NULL
+            ORDER BY 
+                ur.number_of_attempts ASC,
+                time_taken ASC
+            LIMIT 10;
+        """
+        return await self.fetch(query)

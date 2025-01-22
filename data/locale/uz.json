@@ -33,5 +33,7 @@
   "big_robot_number_button": "➖ Kichikroq",
   "congrats_robot_text": "\uD83E\uDD73 Oʻzimga qoyil, men siz oʻylagan sonni {attempts} ta urinishda topdim!",
   "you_lost_text": "\uD83D\uDE21 Siz gʻirromlik qildingiz, shuning uchun siz yutqazdingiz",
-  "robot_game_error": "❌ Iltimos, quyidagi tugmalardan foydalaning!"
+  "robot_game_error": "❌ Iltimos, quyidagi tugmalardan foydalaning!",
+  "no_statistics": "\uD83D\uDCCA Hozircha statistik ma’lumotlar mavjud emas",
+  "statistics_format": "<b>{index}. {fullname}</b>:\n  ➡️ Urinishlar soni: <code>{number_of_attempts}</code>\n  ⏱️ Vaqt: <code>{time_taken:.2f}</code> soniya\n\n"
 }

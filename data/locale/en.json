@@ -33,5 +33,7 @@
   "big_robot_number_button": "➖ Smaller",
   "congrats_robot_text": "🥳 I am impressed, I guessed the number you thought of in {attempts} attempts!",
   "you_lost_text": "\uD83D\uDE21 You made a mistake, that's why you lost",
-  "robot_game_error": "❌ Please use the buttons below!"
+  "robot_game_error": "❌ Please use the buttons below!",
+  "no_statistics": "\uD83D\uDCCA No statistics available yet",
+  "statistics_format": "<b>{index}. {fullname}</b>:\n  ➡️ Number of attempts: <code>{number_of_attempts}</code>\n  ⏱️ Time: <code>{time_taken:.2f}</code> seconds\n\n"
 }
