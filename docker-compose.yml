@@ -1,0 +1,56 @@
+version: '3.9'
+
+services:
+  find_num_db:
+    image: postgres:14-alpine
+    container_name: postgres_db
+    env_file: .env
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: always
+    networks:
+      - app_network
+
+  find_num_web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: find_num_django
+    env_file: .env
+    volumes:
+      - .:/app
+    ports:
+      - "8001:8000"
+    depends_on:
+      - find_num_db
+    restart: always
+    command: >
+      bash -c "
+        sleep 10 &&
+        python manage.py migrate &&
+        python manage.py collectstatic --noinput &&
+        python manage.py createsuperuser --noinput || echo 'Superuser allaqachon yaratilgan' &&
+        gunicorn core.wsgi:application --bind 0.0.0.0:8000"
+    networks:
+      - app_network
+
+  find_num_bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: find_num_bot
+    env_file: .env
+    depends_on:
+      - find_num_db
+      - find_num_web
+    restart: always
+    command: python app.py
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
